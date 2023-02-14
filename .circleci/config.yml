@@ -140,7 +140,7 @@ jobs:
           keys: [scan-backend]
       # Your job code here
       - run:
-          name: scan-frontend
+          name: scan-backend
           command: |
              # Your code here
              cd backend
