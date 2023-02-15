@@ -263,7 +263,6 @@ jobs:
     steps:
       # Checkout code from git
       - checkout
-      - install_awscli
       - run:
           name: Run migrations
           command: |
@@ -280,7 +279,6 @@ jobs:
               curl https://kvdb.io/U86XUeJU8UxABuhEdQ9ZRd/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             fi
       # Here's where you will add some code to rollback on failure 
-      - destroy-environment
       - revert-migrations
 
   deploy-frontend:
